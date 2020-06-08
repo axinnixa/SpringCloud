@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+  application:
+    name: eureka
+eureka:
+  client:
+    # 是否将自己注册到注册中心(注册中心集群需要设置true)
+    register-with-eureka: false
+    # 是否需要搜索服务信息 因为本身为注册中心所以设置为false
+    fetch-registry: false
+    # 配置eureka服务器地址
+    service-url:
+      # 浏览器打开: http://localhost:8081/
+      defaultZone: http://127.0.0.1:${server.port}/eureka/

@@ -1,0 +1,7 @@
+include 'Eureka'
+findProject(':Eureka')?.name = 'eureka'
+include 'Order'
+findProject(':Order')?.name = 'order'
+include 'Product'
+findProject(':Product')?.name = 'product'
+
